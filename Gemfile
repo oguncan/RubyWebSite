@@ -11,7 +11,7 @@ gem "bootstrap"
 gem "jquery-rails"
 gem 'guard', '~> 2.15'
 gem 'simple_form', '~> 4.1'
-gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+gem 'guard-livereload', '~> 2.5', '>= 2.5.2',require:false
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
