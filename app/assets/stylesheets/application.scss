@@ -5,16 +5,28 @@ $dark: #424652;
 $light: #9a9da4;
 $highlight: #8bc6db;
 $border: #E9E9E9;
-
+.clearfix:after,
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+.clearfix:after { 
+clear: both
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
 #main_navigation{
     padding: 2.5em 5%;
     border-bottom: 1px solid $border;
     .name {
         font-weight: 700;
-        font-size: .7em;
+        font-size: .8em;
         text-transform: uppercase;
         border: 2px solid $border;
-        padding: 0.75em 1rem;
+        letter-spacing: 4px;
+        padding: 1rem;
         text-decoration: none;
         color: $dark;
         float: left;
@@ -28,4 +40,15 @@ nav {
         margin: 0 1rem;
         font-size: 1rem;
     }
+}
+.col-5, .col-4, .col-3 {
+    float:left;
+}
+.col-5 {
+    width: 33;
+    padding: 0 5% 0 2.5%;
+}
+.col-4,.col-3 {
+    width: 33%;
+    padding: 0 2.5%;
 }
