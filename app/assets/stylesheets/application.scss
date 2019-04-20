@@ -1,0 +1,31 @@
+
+@import "bootstrap";
+
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+
+#main_navigation{
+    padding: 2.5em 5%;
+    border-bottom: 1px solid $border;
+    .name {
+        font-weight: 700;
+        font-size: .7em;
+        text-transform: uppercase;
+        border: 2px solid $border;
+        padding: 0.75em 1rem;
+        text-decoration: none;
+        color: $dark;
+        float: left;
+    }
+}
+nav {
+    float:right;
+    a{
+        color: $dark;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+}
