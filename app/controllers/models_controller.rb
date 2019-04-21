@@ -11,7 +11,9 @@ class ModelsController < ApplicationController
   # GET /models/1.json
   def show
   end
-
+  
+  def articles
+  end
   # GET /models/new
   def new
     @model = Model.new
@@ -65,6 +67,7 @@ class ModelsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_model
       @model = Model.find(params[:id])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
