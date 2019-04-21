@@ -9,5 +9,8 @@ class PagesController < ApplicationController
     def contact
     
     end
+    def articles_show
+      
+    end
     
 end

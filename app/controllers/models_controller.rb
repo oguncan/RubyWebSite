@@ -12,6 +12,9 @@ class ModelsController < ApplicationController
   def contact
   
   end
+  def articles_show
+      
+  end
   # GET /models
   # GET /models.json
   def index

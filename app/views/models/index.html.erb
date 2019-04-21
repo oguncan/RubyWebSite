@@ -3,15 +3,18 @@
 
 <head>
     <title>Ogün Can Kaya</title>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <header id="main_navigation" class="clearfix">
-        <a href="#" class="name">Ogün Can Kaya</a>
+        <%= link_to "<span class='name'>Ogün Can KAYA</span>".html_safe, root_path %>
         <nav>
-            <%= link_to "Hakkımda", root_path %>
-            <%= link_to "Articles", articles_path %>
+            <%= link_to "Yazılarım", articles_path %>
             <%= link_to "Projelerim", projects_path %>
-            <%= link_to "Projelerim", contact_path %>
+            <%= link_to "İletişim", contact_path %>
         </nav>
     </header>
 

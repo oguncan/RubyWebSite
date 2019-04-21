@@ -1,1 +1,50 @@
-<h2>Projects</h2>
+s<html>
+<p id="notice"><%= notice %></p>
+
+<head>
+    <title>Ogün Can Kaya</title>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header id="main_navigation" class="clearfix">
+        <%= link_to "<span class='name'>Ogün Can KAYA</span>".html_safe, root_path %>
+        <nav>
+            <%= link_to "Yazılarım", articles_path %>
+            <%= link_to "Projelerim", projects_path %>
+            <%= link_to "İletişim", contact_path %>
+        </nav>
+    </header>
+    <h1 class="page_title">Projelerim</h1>
+    <div id="posts_wrapper" class="skinny_wrapper">
+        <div class="post">
+            <p class="date">21 Nisan 2019</p>
+            <h2><a href="https://github.com/oguncan/RubyWebSite">Ruby Projesi</a></h2>
+            <hr>
+        </div>
+        
+        <div class="pagination">
+            <span class="previous_page disabled">
+                Previous
+            </span>
+            <em class="current">1</em>
+            <a rel="next" href="#">2</a>
+            <a class="next_page" href="#">Next</a>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <footer id="main_footer">
+        <p class="copyright">&copy;2019 Ogün Can KAYA</p>
+    </footer>
+
+       
+
+</body>
+
+
+<br>
+
+
+</html>

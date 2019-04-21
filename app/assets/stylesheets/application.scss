@@ -5,8 +5,68 @@ $dark: #424652;
 $light: #9a9da4;
 $highlight: #8bc6db;
 $border: #E9E9E9;
+$white: #FFFFFF;
 
 
+input[type="text"], input[type="email"], input[type="password"],textarea{
+    width: 100%;
+    max-width: 100%;
+    height: 3em;
+    border: 2px solid $border;
+    padding: 1em;
+    margin: .5em 0 2em 0;
+}
+textarea{
+    min-height: 20em;
+}
+input[type="submit"], .button{
+    outline:none;
+    background: transparent;
+    border: 2px solid $border;
+    text-align: center;
+    font-size: 1em;
+    color: $dark;
+    text-decoration: none;
+    padding: 1em 2em;
+    &:hover{
+        border: 2px solid $highlight;
+        color: $highlight;
+        
+    }
+}
+.skinny_wrapper{
+    width: 80%;
+    max-width: 760px;
+    margin: 0 auto;
+    
+}
+#posts_wrapper{
+    padding: 3em 0;
+    .post{
+        text-align: center;
+        .date{
+            font-size: .9em;
+            margin: 0;
+        }
+        h2{
+            margin: 0;
+            font-size: 2em;
+            text-transform: uppercase;
+            a{
+                text-decoration: none;
+                color: $dark;
+                &:hover{
+                    color: $highlight;
+                }
+                
+            }
+            
+        }
+        hr{
+            margin: 3em auto ;
+        }
+    }
+}
 * {
     box-sizing: border-box;   
 }
@@ -48,6 +108,9 @@ p, ul, ol{
 .clearfix:after { 
 clear: both
 }
+body{
+    font-family: 'Raleway',sans-herif;
+}
 .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -66,6 +129,14 @@ clear: both
         color: $dark;
         float: left;
     }
+}
+.page_title{
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid $border;
+    padding: 3em 0;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 nav {
     float:right;
@@ -91,12 +162,29 @@ nav {
 .wrapper_padding{
     padding: 4rem 0;
 }
-.homepage_content{
-    h2{
-        font-size: 1rem;
+#share_box{
+    text-align: center;
+    p{
+        padding: 0 0 1em 0;
+        margin: 0;
+        font-weight: 700;
         text-transform: uppercase;
+        color: $dark;
+        font-size: .8em;
     }
-    hr{
+    i{
+        color: $dark;
+        padding: 1em 1.5em;
+        &:hover{
+            color: $highlight;
+            cursor: pointer;
+            
+            
+        }
+        
+    }
+}
+hr{
         width: 3em;
         display:block;
         height: 2px;
@@ -104,6 +192,12 @@ nav {
         border-top: 2px solid $highlight;
         margin: 2rem 0;
     }
+.homepage_content{
+    h2{
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    
     h3{
         font-size: 1.25em;
         font-weight:400;
@@ -144,4 +238,65 @@ nav {
         padding-top: 0.2em;
     }
 }
+//------- Posts Show
+#post_show_content{
+    header{
+        text-align:center;
+        .date{
+            font-size:.9em;
+            color:$light;
+            margin: 0;
+        }
+        h1{
+            margin: 0;
+        }
+        hr{
+            margin: 2em auto;
+        }
+    }
+}
 
+
+
+
+//------- Pagination
+.pagination:before,
+.pagination:after{
+    content: " ";
+    display: table;
+}
+.pagination:after{
+    clear: both;
+}
+.pagination{
+    text-align: center;
+    margin: 0  0 3em 0;
+    a, .previous_page, .current, .next_page{
+        text-align: center;
+        padding: .75em 1em;
+        margin: 0 .25em;
+        border-radius: .15em;
+        line-height: 20px;
+        text-decoration: none;
+        background: $white;
+        font-weight: 700;
+        font-size: .7em;
+        font-style: normal;
+        color: $dark;
+        &:hover{
+            background: $highlight;
+            color: $white;
+        }
+    }
+    .current{
+        background: $highlight;
+        color: $white;
+    }
+    .disabled{
+        color: #C0C0C0;
+        &:hover{
+            color: #C0C0C0;
+            background: $white;
+            }
+    }
+}
