@@ -29,22 +29,20 @@
             <p> Merhaba </p>
         </div>
         <div class="col-4 homepage_content">
-            <h2> Projeler </h2>
+            <h2> Yazılarım </h2>
             <hr>
             <% @posts.each do |post| %>
                 <h3><a href="#"><%= link_to post.title ,post %></a></h3>
                 <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
             <% end %>
-            <p> Merhaba </p>
-
-            <p class="date"><a href="https://github.com/oguncan/RubyWebSite">
-                Projeye Buradan Ulaşabilirsiniz.</a></p>
-
         </div>
         <div class="col-3 homepage_content">
             <h2> İletişim </h2>
             <hr>
-            <p> Merhaba </p>
+            <p> Ulaşsana Bana ↓ </p>
+            <p>Fırat Üniversitesi</p>
+            <p>Yazılım Mühendisliği</p>
+            <p>oguncanlnx@gmail.com</p>
         </div>
     
 

@@ -1,18 +1,42 @@
-<p id="notice"><%= notice %></p>
+<html>
+<head>
+    <title>Ogün Can Kaya</title>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header id="main_navigation" class="clearfix">
+        <%= link_to "<span class='name'>Ogün Can KAYA</span>".html_safe, root_path %>
+        <nav>
+            <%= link_to "Yazılarım", articles_path %>
+            <%= link_to "Projelerim", projects_path %>
+            <%= link_to "İletişim", contact_path %>
+        </nav>
+    </header>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+        <header>
+            <p class="date"><%= @post.created_at.strftime('%A, %B %d') %> </p>
+            <h1><%= @post.title %></h1>
+            <hr>
+            
+        </header>
+        <div id="content">
+            <%= markdown @post.content %>
+            
+        </div>
+        <div id="share_box">
+            <p>Bu Postu Paylaş.</p>
+            <i class="fa fa-facebook"></i>
+        </div>
+    </div>
+    <br>
+    <br>
+    <%= link_to "Edit", edit_post_path(@post)%>
+</body>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-<p>
-    <strong>Resim:</strong>
-    <%=image_tag @post.resim.url(:medium) if @post.resim? %>
-</p>
+<br>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
+</html>
