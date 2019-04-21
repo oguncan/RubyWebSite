@@ -6,6 +6,7 @@ $light: #9a9da4;
 $highlight: #8bc6db;
 $border: #E9E9E9;
 
+
 * {
     box-sizing: border-box;   
 }
@@ -38,6 +39,7 @@ p, li {
 p, ul, ol{
     margin: 0 0 1.6em 0;
 }
+
 .clearfix:after,
 .clearfix:before {
     content: " ";
@@ -85,6 +87,7 @@ nav {
     width: 33%;
     padding: 0 2.5%;
 }
+
 .wrapper_padding{
     padding: 4rem 0;
 }
@@ -141,3 +144,4 @@ nav {
         padding-top: 0.2em;
     }
 }
+
