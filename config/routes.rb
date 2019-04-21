@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :models
   root 'models#index'
   get "articles" => "pages#articles", as: :articles

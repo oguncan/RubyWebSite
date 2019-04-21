@@ -10,11 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_20_192220) do
+ActiveRecord::Schema.define(version: 2019_04_21_144535) do
 
   create_table "models", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "resim_file_name"
+    t.string "resim_content_type"
+    t.bigint "resim_file_size"
+    t.datetime "resim_updated_at"
   end
 
 end

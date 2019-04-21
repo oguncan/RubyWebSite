@@ -19,6 +19,7 @@ class ModelsController < ApplicationController
   # GET /models.json
   def index
     @models = Model.all
+    @posts = Post.all.order("created_at desc")
   end
 
   # GET /models/1
