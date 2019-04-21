@@ -1,6 +1,17 @@
 class ModelsController < ApplicationController
   before_action :set_model, only: [:show, :edit, :update, :destroy]
-
+  def articles
+      
+  end
+  def article
+  
+  end
+  def projects
+  
+  end
+  def contact
+  
+  end
   # GET /models
   # GET /models.json
   def index
@@ -10,10 +21,10 @@ class ModelsController < ApplicationController
   # GET /models/1
   # GET /models/1.json
   def show
+      @model = Model.find(params[:id])
   end
   
-  def articles
-  end
+  
   # GET /models/new
   def new
     @model = Model.new
@@ -62,7 +73,7 @@ class ModelsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+    
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_model
@@ -72,6 +83,6 @@ class ModelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def model_params
-      params.fetch(:model, {})
+      params.require(:model).permit(:articles)
     end
 end
