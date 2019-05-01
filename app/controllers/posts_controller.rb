@@ -4,9 +4,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order("created_at desc")
+    @posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 2)
   end
-
+  
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -64,11 +64,11 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = Post.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :resim)
+      params.require(:post).permit(:title, :content, :resim, :slug)
     end
 end

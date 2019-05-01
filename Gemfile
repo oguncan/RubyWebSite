@@ -5,10 +5,12 @@ ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
+gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'paperclip'
 gem 'devise'
 gem 'pygments.rb', '~> 1.2', '>= 1.2.1'
 gem 'redcarpet', '~> 3.4'
+gem 'will_paginate', '~> 3.0.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3','>1.3','<1.4'
 gem "bootstrap"

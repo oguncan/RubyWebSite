@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :models
   root 'models#index'
-  get "articles" => "pages#articles", as: :articles
+  get "postlar" => "pages#postlar", as: :postlar
   get "projects" => "pages#projects", as: :projects
   get "contact" => "pages#contact", as: :contact
   get 'articles_show' => "pages#articles_show", as: :articles_show

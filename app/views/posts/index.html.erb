@@ -1,32 +1,73 @@
+<html>
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<head>
+    <title>Ogün Can Kaya</title>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header id="main_navigation" class="clearfix">
+        <%= link_to "<span class='name'>Ogün Can KAYA</span>".html_safe, root_path %>
+        <nav>
+            <%= link_to "Yazılarım", posts_path %>
+            <%= link_to "Projelerim", projects_path %>
+            <%= link_to "İletişim", contact_path %>
+        </nav>
+    </header>
+    <h1 class="page_title">Paylaşımlarım</h1>
+    <div id="posts_wrapper" class="skinny_wrapper">
+        <% @posts.each do |post| %>
+            <div class="post">
+                <p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
+                <h2><a href="#"><%= link_to post.title, post %></a></h2>
+                <hr>
+            
+            </div>
+        <% end %>
+        <div class="post">
+            <p class="date">21 Nisan 2019</p>
+            <h2><a href="#">Yapılacaklar Listesi</a></h2>
+            <hr>
+        </div>
+        <div class="post">
+            <p class="date">21 Nisan 2019</p>
+            <h2><a href="#">Yapılacaklar Listesi</a></h2>
+            <hr>
+        </div>
+        <div class="post">
+            <p class="date">21 Nisan 2019</p>
+            <h2><a href="#">Yapılacaklar Listesi</a></h2>
+            <hr>
+        </div>
+        <div class="post">
+            <p class="date">21 Nisan 2019</p>
+            <h2><a href="#">Yapılacaklar Listesi</a></h2>
+            <hr>
+        </div>
+        <%= will_paginate @posts %>
+        <div class="pagination">
+            <span class="previous_page disabled">
+                Previous
+            </span>
+            <em class="current">1</em>
+            <a rel="next" href="#">2</a>
+            <a class="next_page" href="#">Next</a>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <footer id="main_footer">
+        <p class="copyright">&copy;2019 Ogün Can KAYA</p>
+    </footer>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Resim</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
+       
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= image_tag post.resim.url(:thumb) if post.resim? %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</body>
+
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+
+</html>
