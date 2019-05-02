@@ -13,6 +13,7 @@ gem 'redcarpet', '~> 3.4'
 gem 'will_paginate', '~> 3.0.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3','>1.3','<1.4'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem "bootstrap"
 gem "jquery-rails"
 gem 'guard', '~> 2.15'

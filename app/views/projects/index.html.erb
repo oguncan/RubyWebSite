@@ -13,19 +13,21 @@
         <nav>
             <%= link_to "Yazılarım", posts_path %>
             <%= link_to "Projelerim", projects_path %>
-            <%= link_to "İletişim", contact_path %>
+            <%= link_to "İletişim", contacts_path %>
         </nav>
     </header>
     <h1 class="page_title">Projelerim</h1>
     <div id="posts_wrapper" class="skinny_wrapper">
+        <% @projects.each do |project| %>
         <div class="post">
+            <p class="date"><%= project.created_at.strftime("%A, %B %d") %></p>
+            <h2><a href="#"><%= link_to project.title, project %></a></h2>
             
-            <p class="date">21 Nisan 2019</p>
-            <h2><a href="https://github.com/oguncan/RubyWebSite">Ruby Projesi</a></h2>
             <hr>
+        <% end %>
         </div>
         
-        
+    <%= will_paginate @projects %>    
     </div>
     <br/>
     <br/>

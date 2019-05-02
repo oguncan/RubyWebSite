@@ -14,7 +14,7 @@
         <nav>
             <%= link_to "Yazılarım", posts_path %>
             <%= link_to "Projelerim", projects_path %>
-            <%= link_to "İletişim", contact_path %>
+            <%= link_to "İletişim", contacts_path %>
             <p class="navbar-text pull-right"><% if user_signed_in? %> Logged in as<strong><%= current_user.email %></strong>.
             <%= link_to "Edit Profile", edit_user_registration_path, :class =>'navbar-link' %> |
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class =>"navbar-link" %>
@@ -45,12 +45,12 @@
             <% end %>
         </div>
         <div class="col-3 homepage_content">
-            <h2> İletişim </h2>
+            <h2> Projelerim </h2>
             <hr>
-            <p> Ulaşsana Bana ↓ </p>
-            <p>Fırat Üniversitesi</p>
-            <p>Yazılım Mühendisliği</p>
-            <p>oguncanlnx@gmail.com</p>
+            <% @projects.each do |project| %>
+                <h3><a href="#"><%= link_to project.title ,project %></a></h3>
+                <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+            <% end %>
         </div>
     
 

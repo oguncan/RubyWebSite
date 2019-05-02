@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
   resources :models
+  resources :projects
+  resources :contacts, only: [:new, :create]
+  
   root 'models#index'
   get "postlar" => "pages#postlar", as: :postlar
-  get "projects" => "pages#projects", as: :projects
-  get "contact" => "pages#contact", as: :contact
   get 'articles_show' => "pages#articles_show", as: :articles_show
   
   

@@ -8,7 +8,7 @@ class ModelsController < ApplicationController
   
   end
   def projects
-  
+    @projects = Project.all.order("created_at desc").paginate(:page => params[:page], :per_page => 5)
   end
   def contact
   
@@ -21,6 +21,7 @@ class ModelsController < ApplicationController
   def index
     @models = Model.all
     @posts = Post.all.limit(3).order("created_at desc")
+    @projects = Project.all.limit(3).order("created_at desc")
   end
 
   # GET /models/1

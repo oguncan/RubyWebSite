@@ -34,6 +34,12 @@ input[type="submit"], .button{
         
     }
 }
+.project_button {
+    background: $highlight;
+    color: $white;
+    text-decoration: none;
+    padding: 1em 2em;
+}
 .skinny_wrapper{
     width: 80%;
     max-width: 760px;

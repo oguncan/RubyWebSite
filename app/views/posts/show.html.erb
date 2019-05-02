@@ -19,20 +19,20 @@
             <p class="date"><%= @post.created_at.strftime('%A, %B %d') %> </p>
             <h1><%= @post.title %></h1>
             <hr>
-            <%= render 'disqus' %>
         </header>
-        <div id="content">
-            <%= markdown @post.content %>
-            
-        </div>
-        <div id="share_box">
+         <div id="share_box">
             <p>Bu Postu Paylaş.</p>
             <i class="fa fa-facebook"></i>
         </div>
+        <div id="content">
+            <%= markdown @post.content %>
+            <%= render 'disqus' %>
+        </div>
+        <%= link_to "Edit", edit_post_path(@post)%>
     </div>
     <br>
     <br>
-    <%= link_to "Edit", edit_post_path(@post)%>
+    
 </body>
 
 
