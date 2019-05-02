@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :models
   resources :projects
-  resources :contacts, only: [:new, :create]
+  resources :contacts
   
   root 'models#index'
   get "postlar" => "pages#postlar", as: :postlar

@@ -19,6 +19,9 @@ input[type="text"], input[type="email"], input[type="password"],textarea{
 textarea{
     min-height: 20em;
 }
+.hidden {
+    display: none;
+}
 input[type="submit"], .button{
     outline:none;
     background: transparent;

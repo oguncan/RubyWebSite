@@ -1,0 +1,54 @@
+<html>
+<p id="notice"><%= notice %></p>
+
+<head>
+    <title>Ogün Can Kaya</title>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header id="main_navigation" class="clearfix">
+        <%= link_to "<span class='name'>Ogün Can KAYA</span>".html_safe, root_path %>
+        <nav>
+            <%= link_to "Yazılarım", posts_path %>
+            <%= link_to "Projelerim", projects_path %>
+            <%= link_to "İletişim", contacts_path %>
+        </nav>
+    </header>
+
+    <br>
+    <h1 class="page_title">İletişim</h1>
+    <div class="skinny_wrapper wrapper_padding">
+        <%= form_for @contact do |f| %>
+            <%= f.label :name %><br>
+            <%= f.text_field :name, required: true %>
+            <br>
+            <%= f.label :email %><br>
+            <%= f.email_field :email, required: true %>
+            <br>
+            <%= f.label :message %><br>
+            <%= f.text_area :message, as: :text %>
+            <div class="hidden">
+                <%= f.label :nickname %><br>
+                <%= f.text_field :nickname, hint: 'leave' %>
+            </div>
+            <%= f.submit 'Mesajı gönder', class:"button" %> 
+        <% end %>
+    </div>
+    <br/>
+    <br/>
+    <footer id="main_footer">
+        <p class="copyright">&copy;2019 Ogün Can KAYA</p>
+    </footer>
+
+       
+
+</body>
+
+
+<br>
+
+
+</html>
